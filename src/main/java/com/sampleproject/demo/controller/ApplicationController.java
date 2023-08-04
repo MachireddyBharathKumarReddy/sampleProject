@@ -1,18 +1,17 @@
 package com.sampleproject.demo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.time.LocalDate;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sampleproject.demo.dashboard.Application;
-
 import com.sampleproject.demo.service.ApplicationService;
-
-import java.util.List;
 
 @Controller
 public class ApplicationController {
@@ -33,8 +32,8 @@ public class ApplicationController {
         return "Application";
     }
     @RequestMapping(value="add",method=RequestMethod.POST)
-    public String addnewApplicationPage() {
-        
+    public String addnewApplicationPage(@RequestParam String name, String description,String createBy,  LocalDate createDate,String lastUpdate, LocalDate lastUpdateDate,ModelMap model) {
+    	applicationService.addApplication(name,description,createBy,createDate,lastUpdate,lastUpdateDate);
         return "redirect:applications";
     }
 }

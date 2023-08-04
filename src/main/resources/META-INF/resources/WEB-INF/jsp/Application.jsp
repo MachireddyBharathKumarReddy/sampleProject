@@ -10,21 +10,19 @@
 	<div class="container">
     <h1>Enter App Details</h1>
  <form  method="post" autocomplete="off" >
-            <div class="form-group">
-                <label for="applicationId">Application ID:</label>
-                <input type="text" name="applicationId" id="applicationId" class="form-control" required>
-            </div>
+
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="description">Description:</label>
-                <textarea name="description" id="description" class="form-control" rows="4" required></textarea>
+                <input name="description" id="description" class="form-control" rows="4" required></input>
             </div>
+  
             <div class="form-group">
-                <label for="createdBy">Created By:</label>
-                <input type="text" name="createdBy" id="createdBy" class="form-control" required>
+                <label for="createBy">Created By:</label>
+                <input type="text" name="createBy" id="createBy" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="createDate">Create Date:</label>
