@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TOYOTA</title>
+    <title>LOGIN</title>
 <style><%@include file="/WEB-INF/view/style/style.css"%></style>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <!-- Component Body -->
     <div class="container">
     <div class="title">
-            <h1>Toyota Application Management System</h1>
+            <h1>Sample Application Management System</h1>
         </div>
         <div class="row">
             <div class="col-md-6">
