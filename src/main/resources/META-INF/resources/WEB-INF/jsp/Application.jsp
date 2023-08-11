@@ -1,5 +1,6 @@
 
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,15 +10,16 @@
 <body>
 	<div class="container">
     <h1>Enter App Details</h1>
- <form  method="post" autocomplete="off" >
+ <form:form method="post" autocomplete="off" modelAttribute = "application">
 
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name" class="form-control" required>
+                
             </div>
             <div class="form-group">
                 <label for="description">Description:</label>
-                <input name="description" id="description" class="form-control" rows="4" required></input>
+                <input name="description" id="description" class="form-control" required></input>
             </div>
   
             <div class="form-group">
@@ -36,10 +38,11 @@
                 <label for="lastUpdateDate">Last Update Date:</label>
                 <input type="date" name="lastUpdateDate" id="lastUpdateDate" class="form-control" required>
             </div>
+            <br>
             <div class="form-group">
                 <input type="submit" value="Submit" class="btn btn-primary">
             </div>
-        </form>
+        </form:form>
     
     
     </div>

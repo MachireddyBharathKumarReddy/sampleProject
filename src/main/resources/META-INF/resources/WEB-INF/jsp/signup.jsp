@@ -16,23 +16,23 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card rounded">
-                    <form class="box" autocomplete="off" method="post" >
-                        <h1>SIGN IN</h1>
+                    <form class="box" autocomplete="off" method="post"  >
+                        <h1>SIGN UP</h1>
                         <div>
-                        <pre>${invalidMessage}</pre>
-                        <pre>${errorMessage}</pre>
+                    	 <pre>${successmessage}</pre>
+                        <pre>${failuremessage}</pre>
                         </div>
                         <div class="block">
                             <label for="username">Username:</label>
-                            <input type="text" name="username" placeholder="Username" required>
+                            <input type="text" name="username" placeholder="Username" autocomplete="off" required>
                         </div>
                         <div class="block">
                             <label for="password">Password:</label>
-                            <input type="password" name="password" placeholder="Password" required>
+                            <input type="password" name="password" placeholder="Password" autocomplete="off" required>
                         </div>
-                        <input type="submit" value="Login">
+                        <input type="submit" value="signup">
                         <div class="links">
-                            <a href="/signup">New user?Please Signup</a>
+                            <a href="/login">back to login</a>
                         </div>
                     </form>
                 </div>

@@ -84,9 +84,6 @@ a{
     margin-top: 50px;
     }
     
-    .img {
-            height: 10px;  
-            width: 5px;
-            text-align: left;
-           margin-top: 100px;
-    }
+  .links{
+  	text-align: center;
+  }

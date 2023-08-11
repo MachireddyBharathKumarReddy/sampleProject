@@ -18,6 +18,8 @@
             <th>Create Date</th>
             <th>Last Update</th>
             <th>Last Update Date</th>
+            <th>Delete</th>
+            <th>Update</th>
         </tr>
         <c:forEach items="${getAllApplications}" var="app">
             <tr>
@@ -28,10 +30,13 @@
                 <td>${app.createDate}</td>
                 <td>${app.lastUpdate}</td>
                 <td>${app.lastUpdateDate}</td>
+                <td><a href="delete?id=${app.applicationId}" class="btn btn-warning">Delete</a></td>
+    			<td><a href="update/${app.applicationId}" class="btn btn-success">Update</a></td>
             </tr>
         </c:forEach>
     </table>
     <a href="add" class="btn btn-success">Add</a>
+
     </div>
     <script src="https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.6.0/jquery.min.js"></script>

@@ -1,12 +1,15 @@
 package com.sampleproject.demo.service;
 
 import java.time.LocalDate;
+import javax.validation.Valid;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import org.springframework.stereotype.Service;
 
-import com.sampleproject.demo.dashboard.Application;
+import com.sampleproject.demo.model.Application;
 
 @Service
 public class ApplicationService {
@@ -27,4 +30,27 @@ public class ApplicationService {
     Application application = new Application(++idcount,name,description,createBy,createDate,lastUpdate,lastUpdateDate);
     getAllApplications.add(application);
     }
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+		Predicate<? super Application>predicate=Application->Application.getApplicationId()==id;
+		getAllApplications.removeIf(predicate);
+		
+	}
+	
+	public Application findById(int id) 
+	  { 
+	Predicate<? super Application>predicate=Application->Application.getApplicationId()==id;
+	  Application application = getAllApplications.stream().filter(predicate).findFirst().get(); 
+	  return application; 
+	  }
+	  
+	public void updateApplication(@Valid Application application) {
+		// TODO Auto-generated method stub
+		deleteById(application.getApplicationId());
+		getAllApplications.add(application);
+		
+	}
+	
+	 	
+	 
 }
