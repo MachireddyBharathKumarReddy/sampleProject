@@ -2,7 +2,10 @@ package com.sampleproject.demo.model;
 
 
 import java.time.LocalDate;
-import javax.persistence.*;
+
+import jakarta.persistence.*;
+
+
 
 @Entity
 public class Application {
